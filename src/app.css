@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.preview {
+    background-image: repeating-linear-gradient(
+        45deg,var(--fallback-b1,oklch(var(--b1))),
+        var(--fallback-b1,oklch(var(--b1))) 13px,
+        var(--fallback-b2,oklch(var(--b2))) 13px,
+        var(--fallback-b2,oklch(var(--b2))) 14px
+    )
+}
+
+@layer components {
+    .custom-dropdown {
+        @apply dropdown-content dropdown-open menu inline-block z-10 p-2 mt-2 shadow-xl bg-base-100 rounded-md w-full max-h-48 overflow-y-scroll overflow-x-hidden not-last-child:pb-1
+    }
+}
